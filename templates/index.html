@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hasil Clustering Mall Customer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        table.data { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+        table.data th, table.data td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        table.data th { background-color: #f2f2f2; }
+        img { max-width: 700px; margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <h1>Hasil Clustering Mall Customer</h1>
+
+    <h2>Data Cluster</h2>
+    {{ cluster_table | safe }}
+
+    <h2>Metode Elbow</h2>
+    <img src="data:image/png;base64,{{ elbow_img }}" alt="Elbow Method Plot" />
+
+    <h2>Plot Clustering</h2>
+    <img src="data:image/png;base64,{{ cluster_img }}" alt="Cluster Plot" />
+
+    <h2>Silhouette Score</h2>
+    <img src="data:image/png;base64,{{ silhouette_img }}" alt="Silhouette Score Plot" />
+</body>
+</html>
